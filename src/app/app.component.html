@@ -1,4 +1,51 @@
 <mat-toolbar color="primary">
   <span>Your financial portfolio</span>
 </mat-toolbar>
+<br>
+
+<mat-toolbar color="primary">
+  <div class = "margin-small" (click) = 'itemClicked()'>NSC</div>
+  <span class = "margin-small">TD</span>
+  <span class = "margin-small">RD</span>
+  <span class = "margin-small">LIC</span>
+</mat-toolbar>
+
+<br>
+
+<div *ngIf="isItemClicked">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> Position </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef> Start Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="maturityDate">
+      <th mat-header-cell *matHeaderCellDef> Maturity Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.maturityDate}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</div>
+
 
