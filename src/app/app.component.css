@@ -1,0 +1,23 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.container {
+    margin: 100px;
+}
+
+.margin-small {
+    margin: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-tab-label, .mat-tab-link {
+    color: rgba(0,0,0,.87) !important;
+}
+
+.mat-black {
+    color: rgba(0,0,0,.87) !important;
+}
+
+

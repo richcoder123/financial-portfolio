@@ -1,4 +1,21 @@
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-<div>
-  Current app - {{title}}
-</div>
+<mat-toolbar color="primary">
+  <span>Your financial portfolio</span>
+</mat-toolbar>
+<br>
+
+<mat-toolbar color="primary">
+  <div class = "margin-small" (click) = 'itemClicked()'>NSC</div>
+  <span class = "margin-small">TD</span>
+  <span class = "margin-small">RD</span>
+  <span class = "margin-small">LIC</span>
+  <span class = "margin-small">PPF</span>
+  <span class = "margin-small">KVP</span>
+</mat-toolbar>
+
+<app-table-display 
+  [displayedCols]="displayedCols"
+  [data] = "dataSource"
+  >
+</app-table-display>
+
+
