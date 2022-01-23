@@ -34,8 +34,7 @@ export class AppComponent {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   itemClicked() {
     this.isItemClicked = true;

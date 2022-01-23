@@ -4,7 +4,7 @@
 <br>
 
 <mat-toolbar color="primary">
-  <div class = "margin-small" (click) = 'itemClicked()'>NSC</div>
+  <span class = "margin-small" (click)="itemClicked()">NSC</span>
   <span class = "margin-small">TD</span>
   <span class = "margin-small">RD</span>
   <span class = "margin-small">LIC</span>
@@ -12,7 +12,7 @@
   <span class = "margin-small">KVP</span>
 </mat-toolbar>
 
-<app-table-display 
+<app-table-display *ngIf="isItemClicked"
   [displayedCols]="displayedCols"
   [data] = "dataSource"
   >

@@ -37,6 +37,7 @@ export const firebaseConfig = {
     MatToolbarModule,
     MatTabsModule,
     MatTableModule,
+    MatToolbarModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule
   ],
